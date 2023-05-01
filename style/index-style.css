@@ -1,0 +1,341 @@
+@charset "UTF-8";
+
+/* fontes google */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;700&display=swap');
+
+:root {
+    --cor-fundo: #213B3F;
+    --cor-fundo-claro: #cfd2d4;
+    --cor-destaque: #22FDD8;
+    --cor-discreta: #4D868A;
+    --cor-texto-claro: #dbdbdb;
+    --cor-texto-escuro: #3a3a3a;
+    
+    --fonte-titulo: 'Montserrat', sans-serif;
+    --fonte-texto: 'Figtree', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+
+/* TELAS ATÉ 768px */
+
+body {
+    background-image: url(../assets/fundo-museu-860.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    color: var(--cor-texto-escuro);
+    font-family: var(--fonte-texto);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.titulo {
+    padding: 5vw 1vw 10vw 4vw;
+}
+
+.titulo > h1 {
+    color: var(--cor-destaque);
+    font-family: var(--fonte-titulo);
+    font-size: 2.6rem;
+    font-weight: 300;
+    text-align: left;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    padding-bottom: 10px;
+}
+
+.titulo > h1 > strong {
+    font-weight: 600;
+}
+
+.titulo > h2 {
+    color: var(--cor-discreta);
+    font-family: var(--fonte-titulo);
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: left;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.container-foto {
+    text-align: center;
+}
+
+.container-foto img {
+    width: 70%;
+    margin-bottom: 10vw;
+    border: 3px solid var(--cor-destaque);
+    border-radius: 1000px;
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.6);
+}
+
+.descricao {
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.descricao > p {
+    color: var(--cor-texto-claro);
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 2rem;
+    padding: 30px;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 0 30vw 0 30vw;
+}
+
+.botoes > a {
+    color: var(--cor-texto-claro);
+    font-family: var(--fonte-titulo);
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 12px 0px;
+    border: 2px solid var(--cor-destaque);
+    border-radius: 7px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+.botoes > a:hover {
+    background-color: var(--cor-texto-escuro);
+}
+
+footer {
+    background-color: var(--cor-fundo);
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.4);
+}
+
+.contatos__textos { 
+    text-align: center;
+    margin: auto;
+    padding: 20px 0 0 0;
+}
+
+.contatos__textos > p {
+    color: var(--cor-texto-claro);
+    font-family: var(--fonte-texto);
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+.contatos__textos > p > i {
+    font-size: 2rem;
+    padding-right: 7px;
+    vertical-align: middle;
+}
+
+.contatos__redes {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px auto;
+}
+
+.contatos__redes > a > img {
+    width: 40px;
+}
+
+.creditos > p {
+    color: var(--cor-discreta);
+    font-size: .9rem;
+    text-align: center;
+    padding: 0 0 20px 0;
+}
+
+.creditos > p > a {
+    color: var(--cor-discreta);
+    text-decoration: none;
+}
+
+.creditos > p > a:hover {
+    color: var(--cor-texto-claro);
+}
+
+
+/* TELAS MÉDIAS */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    .titulo {
+        padding: 8vw 10vw;
+    }
+    
+    .titulo > h1 {
+        font-size: 4rem;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    
+    .titulo > h2 {
+        font-size: 2.6rem;
+        text-align: center;
+    }
+
+    .container-foto img {
+        width: 60%;
+    }
+    
+    .descricao > p {
+        font-size: 1.6rem;
+        line-height: 2.3rem;
+    }
+
+    .botoes {
+        flex-direction: row;
+        justify-content: center;
+        gap: 60px;
+        margin: 0 20vw; 
+    }
+    
+    .botoes > a {
+        font-size: 1.6rem;
+        padding: 15px 30px;
+    }
+
+    .contatos__textos > p {
+        font-size: 1.4rem;
+    }
+
+    .contatos__redes {
+        margin: 25px auto 30px auto;
+        padding: 0 20% 0 20%;
+    }
+    
+    .contatos__redes > a > img {
+        width: 60px;
+    }
+    
+    .creditos > p {
+        font-size: 1.1rem;
+        padding: 0 0 20px 0;
+    }
+}
+
+
+/* TELAS GRANDES */
+
+@media screen and (min-width: 992px) {
+
+    body {
+        background-image: url(../assets/fundo-museu-1920.jpg);
+    }
+
+    main {
+        display: grid;
+        grid-template-areas: 
+            "titles photo"
+            "description photo";
+        align-items: center;
+        justify-items: center;
+        margin: 5vw 16vw 18vw 16vw;
+    }
+
+    .titulo {
+        grid-area: titles;
+        align-self: end;
+        width: 40vw;
+        padding: 0 0 40px 0;  
+    }
+
+    .titulo > h1 {
+        font-size: 4.2rem;
+    }
+    
+    .titulo > h2 {
+        font-size: 2rem;
+    }
+
+    .descricao {
+        grid-area: description;
+        align-self: start;
+        background-color: transparent;
+        width: 40vw;
+        padding: 0;
+    }
+
+    .descricao > p {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        color: white;
+        text-shadow: 2px 2px 3px rgb(0, 0, 0);
+    }
+
+    .botoes {
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+        margin: 0;
+        padding-bottom: 30px;
+    }
+
+    .botoes > a {
+        background-color: var(--cor-destaque);
+        color: var(--cor-texto-escuro);
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .botoes > a:hover {
+        color: var(--cor-texto-claro);
+    }
+
+    .container-foto {
+        grid-area: photo;
+        text-align: left; 
+    }
+
+    .container-foto img {
+        width: 400px;
+        margin: 0;
+    }
+
+    .contatos {
+        display: flex;
+        justify-content: flex-start;
+        gap: 50px;
+        align-items: center;
+        justify-content: left;
+        margin: 0 0 0 25%;
+        padding: 15px 0 15px 0;
+    }
+
+    .contatos__textos { 
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .contatos__redes {
+        display: flex;
+        gap: 50px;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+    
+    .contatos__redes > a > img {
+        width: 30px;
+    }
+
+    .contatos__redes > a > img:hover {
+        width: 30px;
+        box-shadow: 0 0 30px 0px rgba(34, 253, 216, 0.15);
+    }
+}

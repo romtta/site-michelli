@@ -1,0 +1,296 @@
+@charset "UTF-8";
+
+/* TELAS ATÉ 768px */
+
+body {
+  background-color: var(--cor-fundo-claro);
+  background-image: none;
+}
+
+p, ul, li, a, h3, h4 {
+  color: var(--cor-texto-escuro);
+  font-family: var(--fonte-texto);
+  font-size: 1rem;
+}
+
+header {
+  background-color: var(--cor-fundo);
+}
+
+.titulo {
+  color: var(--cor-destaque);
+  font-family: var(--fonte-titulo);
+  font-size: 2.6rem;
+  font-weight: 300;
+  text-align: center;
+  padding: 30px 0 10px 0;
+}
+
+.titulo > strong {
+  font-weight: 600;
+}
+
+.subtitulo {
+  color: var(--cor-discreta);
+  font-family: var(--fonte-texto);
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.menu {
+  background-color: rgba(0, 0, 0, 0.4);    
+  padding: 12px 5px;
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
+}
+
+.menu > a {
+  color: var(--cor-texto-claro);
+  font-size: 1.1rem;
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+.menu > a:hover {
+  color: var(--cor-destaque);
+}
+
+main {
+  display: block;
+  line-height: 1.8rem;
+  padding: 0 0 5vw 0; 
+}
+
+main h3,
+main h4 {
+  padding-left: 3vw;
+}
+
+main > p {
+  padding: 15px 3vw 0 3vw;
+}
+
+main > p > strong {
+  color: var(--cor-fundo);
+}
+
+main > p > a {
+  color: var(--cor-fundo);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+main > p > a:hover {
+  color: var(--cor-discreta);
+}
+
+.categoria {
+  background-image: linear-gradient(to right, var(--cor-discreta), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  color: var(--cor-fundo);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  margin-top: 30px;
+  padding: 5px 0 5px 3vw;
+}
+
+.experiencia, .separador-cursos {
+  margin: 15px 0;
+}
+
+.cargo, .curso {
+  color: var(--cor-fundo);
+  font-size: 1.1rem;
+}
+
+.local {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.periodo {
+  font-weight: 400;
+}
+
+ul {
+  list-style-position: outside;
+  padding: 0 2vw 0 7vw; /* arranjo para identar o conteúdo quebrado */
+}
+
+ul.lista-habilidades {
+  list-style-type: none;
+  padding: 0 2vw 0 3vw;
+}
+
+ul.lista-habilidades > li {
+  margin: 15px 0 20px 0;
+}
+
+ul.infos-adicionais {
+  margin: 15px 0 0 0;
+}
+
+
+/* Animações da barra de progresso */
+.caixa-barra {
+  height: 10px;
+  width: 60%;
+  background-color: #CCC;
+  position: relative;
+  border-radius: 7px;
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.4);
+}
+
+.barra25 {
+  position: absolute;
+  height: 100%;
+  background-color: var(--cor-destaque);
+  width: 25%;
+  border-radius: 7px;
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.4);
+  animation: animacao-barra25 5s;
+}
+
+.barra50 {
+  position: absolute;
+  height: 100%;
+  background-color: var(--cor-destaque);
+  width: 50%;
+  border-radius: 7px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  animation: animacao-barra50 5s;
+}
+
+.barra75 {
+  position: absolute;
+  height: 100%;
+  background-color: var(--cor-destaque);
+  width: 75%;
+  border-radius: 7px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  animation: animacao-barra75 5s;
+}
+
+.barra100 {
+  position: absolute;
+  height: 100%;
+  background-color: var(--cor-destaque);
+  width: 100%;
+  border-radius: 7px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  animation: animacao-barra100 5s;
+}
+  
+@keyframes animacao-barra25 {
+  0% { width: 0%; } 
+  100% { width: 25%;}
+}
+
+@keyframes animacao-barra50 {
+  0% { width: 0%; } 
+  100% { width: 50%;}
+}
+
+@keyframes animacao-barra75 {
+  0% { width: 0%; } 
+  100% { width: 75%;}
+}
+
+@keyframes animacao-barra100 {
+  0% { width: 0%; } 
+  100% { width: 100%;}
+}
+
+
+/* TELAS MÉDIAS */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+ 
+  p, ul, li, a, h3, h4 {
+    font-size: 1.1rem;
+  }
+  
+  .titulo {
+    font-size: 3rem;
+  }
+  
+  .subtitulo {
+    font-size: 2rem;
+  }
+  
+  .menu {  
+    padding: 15px 10px;
+  }
+  
+  .menu > a {
+    font-size: 1.2rem;
+    padding: 0 15px;
+  }
+   
+  .categoria {
+    font-size: 1.3rem;
+  }
+  
+  .experiencia, .separador-cursos {
+    margin: 20px 0;
+  }
+  
+  .cargo, .curso {
+    font-size: 1.2rem;
+  }
+  
+  ul {
+    padding: 0 2vw 0 5vw; /* arranjo para identar o conteúdo quebrado */
+  }
+  
+  ul.lista-habilidades > li {
+    margin: 20px 0 25px 0;
+  }
+  
+  ul.infos-adicionais {
+    margin: 20px 0 0 0;
+  }
+}
+
+
+/* TELAS GRANDES */
+
+@media screen and (min-width: 992px) {
+
+  body {
+    background-image: url("../assets/padrao.png");
+    background-repeat: repeat;
+    background-size: 20%;
+  }
+
+  p, ul, li, a, h3, h4 {
+    font-size: 1.1rem;
+  }
+
+  header {
+    width: 802px;
+    margin: 0 auto;
+  }
+
+  main {
+    background-color: var(--cor-fundo-claro);
+    width: 800px;
+    margin: 1px auto 3vw auto;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+  }
+
+  .titulo {
+    font-size: 3.2rem;
+    margin: 0 auto;
+  }
+  
+  .subtitulo {
+    font-size: 2rem;
+  }
+  
+  ul {
+    padding: 0 2vw 0 4.5vw; /* arranjo para identar o conteúdo quebrado */
+  }
+}

@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/* TELAS ATÉ 768px */
+
+body {
+  background-color: var(--cor-fundo-claro);
+  background-image: none;
+}
+
+main > p {
+    padding: 30px 15px 20px 20px;
+}
+
+.projeto {
+    text-align: center;
+}
+
+.titulo-projeto {
+    color: var(--cor-fundo);
+    font-family: var(--fonte-texto);
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+
+.descricao-projeto {
+    text-align: left;
+    margin: 0 15px 10px 20px;
+}
+
+.img-projeto {
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* Michelli pediu para omitir a descrição dos projetos */
+p.descricao-projeto {
+    display: none;
+}
+
+
+/* TELAS MÉDIAS */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    main > p {
+        padding: 30px 30px 20px 30px;
+    }
+
+    .descricao-projeto {
+        margin: 0 30px 15px 30px;
+    }
+
+    .img-projeto {
+        width: 80%;
+        border: 3px solid var(--cor-discreta);
+        border-radius: 10px;
+    }
+}
+
+
+/* TELAS GRANDES */
+
+@media screen and (min-width: 992px) {
+
+    body {
+        background-image: url("../assets/padrao.png");
+        background-repeat: repeat;
+        background-size: 20%;
+    }
+
+    main > p {
+        padding: 30px 30px 20px 30px;
+    }
+
+    .descricao-projeto {
+        margin: 0 30px 15px 30px;
+    }
+
+    .img-projeto {
+        width: 80%;
+        border: 3px solid var(--cor-discreta);
+        border-radius: 10px;
+    }
+}
